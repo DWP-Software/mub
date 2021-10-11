@@ -53,7 +53,7 @@ striped="true">
 		<th data-options="field:'tgl_pinjam_txt', width:'25', halign:'center', align:'center'">Tanggal Pinjam</th>
 		<th data-options="field:'anggota_id',halign:'center', align:'center'" hidden="true">ID</th>
 		<th data-options="field:'anggota_id_txt', width:'35', halign:'center', align:'left'">Nama Anggota</th>
-		<th data-options="field:'barang_id', width:'35', halign:'center', align:'left'"  hidden="true">Nama barang</th>
+		<!-- <th data-options="field:'barang_id', width:'35', halign:'center', align:'left'"  hidden="true">Nama barang</th> -->
 		<th data-options="field:'lama_angsuran',halign:'center', align:'center'" hidden="true">Lama</th>
 		<th data-options="field:'bunga', halign:'center', align:'right'" hidden="true"> Bunga</th>
 		<th data-options="field:'bunga_txt', halign:'center', align:'right'" hidden="true"> Bunga</th>
@@ -126,25 +126,27 @@ striped="true">
 								<input id="anggota_id" name="anggota_id" style="width:195px; height:25px" class="easyui-validatebox" required="true" >
 							</td>	
 						</tr>
-						<tr style="height:35px">
+						<!-- <tr style="height:35px">
 							<td>Nama Barang</td>
 							<td>:</td>
 							<td>
 								<select id="barang_id" name="barang_id" style="width:195px; height:25px" class="easyui-validatebox" required="true">
 									<option value="0"> -- Pilih Barang --</option>
 									<?php	
-									foreach ($barang_id as $row) {
+									/* foreach ($barang_id as $row) {
 										echo '<option value="'.$row->id.'">'.$row->nm_barang.' Rp '.number_format($row->harga).'</option>';
-									}
+									} */
 									?>
 								</select>
 							</td>	
-						</tr>
+						</tr> -->
 						<tr style="height:35px">
-							<td>Harga Barang</td>
+							<!-- <td>Harga Barang</td> -->
+							<td>Jumlah Pinjaman</td>
 							<td>:</td>
 							<td>
-								<input class="" id="jumlah" name="jumlah" style="width:195px; height:25px; background-color:#eee;" readonly="true"  />
+								<!-- <input class="" id="jumlah" name="jumlah" style="width:195px; height:25px; background-color:#eee;" readonly="true"  /> -->
+								<input class="" id="jumlah" name="jumlah" style="width:195px; height:25px; background-color:#eee;" />
 							</td>	
 						</tr>
 						<tr style="height:35px">
