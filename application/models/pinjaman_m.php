@@ -651,7 +651,7 @@ class Pinjaman_m extends CI_Model {
 		$data = array(			
 			'tgl_pinjam'			=>	$this->input->post('tgl_pinjam'),
 			'anggota_id'			=>	$this->input->post('anggota_id'),
-			'barang_id'				=>	$this->input->post('barang_id'),
+			// 'barang_id'				=>	$this->input->post('barang_id'),
 			'lama_angsuran'		=>	$this->input->post('lama_angsuran'),
 			'jumlah'					=>	str_replace(',', '', $this->input->post('jumlah')),
 			'bunga'					=>	$this->input->post('bunga'),

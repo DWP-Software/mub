@@ -124,7 +124,7 @@ class Pinjaman extends OperatorController {
 			$rows[$i]['anggota_id'] = $r->anggota_id;
 			//$rows[$i]['anggota_id_txt'] ='AG' . sprintf('%04d', $r->anggota_id).' <br>'.$anggota->nama;
 			$rows[$i]['anggota_id_txt'] = $anggota->identitas.' <br>'.$anggota->nama.' <br>'.$anggota->departement;
-			$rows[$i]['barang_id'] = $r->barang_id;
+			// $rows[$i]['barang_id'] = $r->barang_id;
 			$rows[$i]['lama_angsuran'] = $r->lama_angsuran;
 			$rows[$i]['lama_angsuran_txt'] = $r->lama_angsuran.' Bulan';
 			$rows[$i]['bunga'] = $r->bunga;
@@ -133,13 +133,18 @@ class Pinjaman extends OperatorController {
 			$rows[$i]['biaya_adm_txt'] = $r->biaya_adm;
 			$rows[$i]['jumlah'] = number_format(nsi_round($r->jumlah));
 			$rows[$i]['hitungan'] = '<table>
-						>!-- <tr>
+						<tr>
 							<td width="100px" align="left">Nama Barang</td> 
 							<td width="10px" align="center"> : </td>
-							<td width="75px" align="left">'.$barang->nm_barang.'</td>
-						</tr> -->
+							<td width="75px" align="left">'.($barang ? $barang->nm_barang : '').'</td>
+						</tr>
 						<tr>
-							<!-- <td width="100px" align="left">Harga Barang</td> -->
+							<td width="100px" align="left">Harga Barang</td>
+							<td width="10px" align="center"> : </td>
+							<td width="75px" align="right">'.number_format($r->jumlah) .'</td>
+						</tr>';
+			$rows[$i]['hitungan'] = '<table>
+						<tr>
 							<td width="100px" align="left">Jumlah Pinjaman</td> 
 							<td width="10px" align="center"> : </td>
 							<td width="75px" align="right">'.number_format($r->jumlah) .'</td>
