@@ -116,8 +116,8 @@ $tgl_periode_txt = $tgl_dari_txt . ' - ' . $tgl_samp_txt;
 		foreach ($opsi_val_arr as $key => $value) {
 			$out[$key] = $value;
 		}
-		$pajak = $shu_belum * $out['pjk_pph'] /100;
-		$shu_stl_pajak = $shu_belum - $pajak;
+		$pajak = ((int)$shu_belum * (int)$out['pjk_pph']) /100;
+		$shu_stl_pajak = ((int)$shu_belum - (int)$pajak);
 
 		$jml_cadangan = $out['dana_cadangan'] * $shu_stl_pajak/100; 
 		$jml_jasa_anggota = $out['jasa_anggota'] * $shu_stl_pajak/100; 
